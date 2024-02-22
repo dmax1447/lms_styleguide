@@ -4,7 +4,7 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
 module.exports = (webpackConfigEnv) => {
   const defaultConfig = singleSpaDefaults({
-    orgName: "vue-mf",
+    orgName: "lms",
     projectName: "styleguide",
     webpackConfigEnv,
   });
@@ -13,12 +13,16 @@ module.exports = (webpackConfigEnv) => {
     module: {
       rules: [
         {
+          test: /\.scss$/,
+          use: ["vue-style-loader", "css-loader", "sass-loader"],
+        },
+        {
           test: /\.vue$/,
           use: ["vue-loader"],
         },
       ],
     },
-    externals: ["vue", "vue-router", /^@vue-mf\/.+/],
+    externals: [/^@lms\/.+/],
     plugins: [new VueLoaderPlugin()],
   });
 
