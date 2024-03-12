@@ -30,6 +30,8 @@
     "jest-cli": "^27.0.6",
     "prettier": "^2.3.2",
     "pretty-quick": "^3.1.1",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
     "sass": "^1.71.1",
     "sass-loader": "^14.1.1",
     "style-loader": "^3.2.1",
@@ -43,8 +45,11 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "@synergy/lms-ui-kit": "./synergy-lms-ui-kit-3.0.0.tgz",
     "axios": "^1.6.7",
+    "lodash": "^4.17.21",
     "mitt": "^3.0.1",
-    "vue": "^2.6.14"
+    "vue": "^2.6.14",
+    "vue-virtual-scroll-list": "2.3.5"
   }
 }
